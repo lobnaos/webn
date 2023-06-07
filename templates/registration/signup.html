@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{%block content%}
+<center>
+<h1>sign up</h1>
+    </center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+input, button{
+align-self: center;
+margin-top: 30px;
+margin-top: 30px;
+border-radius: 100px;
+color:#490614;
+background-color: rgba(255, 255, 255, 0.765);
+padding:10px 10px 10px 10px;
+border-color: rgba(253, 231, 203, 0.705);;
+}
+input[placeholder]{
+color:#490614;
+}
+label{
+margin-left:1%;
+}
+form{
+background-color:rgba(255, 255, 255, 0.674);
+margin-left: 300px;
+margin-right: 300px;
+padding-bottom: 20px;
+padding-top: 20px;
+border-radius: 20px;
+}
+div{
+margin-top: 20px;
+color: #490614;
+font-family:'Times New Roman', Times, serif;
+}
+h1{
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="background">
+<div class="shape"></div>
+<div class="shape"></div>
+</div>
+<form action="" method="POST">
+{% csrf_token %}
+<center>
+<h3>Signup here</h3>
+<label for="username">Username</label>
+<input type="text" placeholder="Username" name="username" id="username">
+</br>
+ <label for="email">Email</label>
+ <input type="email" placeholder="Email or Phone" name="email" id="email">
+</br>
+    <label for="password1">password</label>
+  <input type="password" placeholder="password" name="password1" id="password1">
+</br>
+ <label for="password2">Confrom Password</label>
+ <input type="password" placeholder="Confrom Password" name="password2" id="password2">
+</br>
+<button type="submit">Signup</button>
+    <br>
+
+<a href="#" >i have already account</a>
+</center>
+</form>
+</body>
+</html>
+    {% endblock %}

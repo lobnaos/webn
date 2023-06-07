@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{%block content%}
+<head>
+    <style>
+       input, button{
+            align-self: center;
+            margin-top: 30px;
+            margin-top: 30px;
+            border-radius: 100px;
+            color:#490614;
+            background-color: rgba(255, 255, 255, 0.765);
+            padding:10px 10px 10px 10px;
+            border-color: rgba(253, 231, 203, 0.705);; 
+            
+        
+        }
+        input[placeholder]{
+            color:#490614;
+        }
+        label{
+            margin-left:1%;
+        }
+        form{
+            background-color:rgba(255, 255, 255, 0.674);
+            margin-left: 300px;
+            margin-right: 300px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border-radius: 20px;
+            
+        }
+        div{
+            margin-top: 20px;
+            color: #490614;
+            font-family:'Times New Roman', Times, serif;
+        }
+        h1{
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<center>
+   {% include 'registration/errorlogin.html' %} 
+<form action="" method="POST">
+    {% csrf_token %}
+    <h1>Log in</h1>
+          <label for="username" >Username</label>
+          <input type="username" placeholder="enter username" id="username" name="username" width="50px">
+          <br>
+          <label for="password1">Password</label>
+          <input type="password" placeholder="enter password" id="password" name="password" width="50px">
+          <br>
+          <button type="submit">log in</button>
+
+</form>
+</center>
+</div>
+</body>
+    {% endblock %}
